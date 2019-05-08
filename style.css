@@ -92,3 +92,6 @@ display:inline-block;
 margin-right: auto;    
 margin-left: auto;  
 }
+.photo:hover {
+	transform: scale(1.1);
+}
