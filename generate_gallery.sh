@@ -2,8 +2,6 @@
 
 photos=$(ls photos/*.jpg)
 
-
-
 echo "<html>
 	<head>
 		<title>Gallery</title>
@@ -30,7 +28,11 @@ echo "<html>
 
 for photo in $photos
 do
-    echo "<a target=\"_blank\" href=\"$photo\"><img class=\"photo\" src=\"$photo\"></a>" >> gallery.html
+    echo "converting $photo to thumbnail..."
+    photo_base=$(basename $photo)
+    thumb_name="${photo_base%.*}_thumbnail.jpg"
+    convert $photo -resize 256x256 photos/thumbnails/$thumb_name
+    echo "<a target=\"_blank\" href=\"$photo\"><img class=\"photo\" src=\"photos/thumbnails/$thumb_name\"></a>" >> gallery.html
 done
 
 echo "</div>
