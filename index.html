@@ -5,21 +5,31 @@
 		<link rel="stylesheet" type="text/css" href="style.css">
 		<script src='http://127.0.0.1:9001/js/socket.js'></script>
 		<style>
-            @import url('https://fonts.googleapis.com/css?family=Work+Sans');
-        </style>
+      @import url('https://fonts.googleapis.com/css?family=Work+Sans');
+    </style>
 	</head>
 	<body>
-		<a href="index.html"><h1>Lucas Goudin</h1></a>
-		<img src="portrait cropped web.png" class="profile_pic" height=70px>
-		<nav class="navbar">
-			<ul>
-				<li><a href="gallery.html">Gallery</a></li>
-				<li><a href="CV.pdf" target="_blank">CV</a></li>
-				<li><a href="https://github.com/Rukkaitto" target="_blank">Github</a></li>
-				<li><a href="contact.html">Contact</a></li>
-			</ul>
-		</nav>
-		<div class="centerpane">
+    <div class="global-header">
+      <a href="index.html" class="name">
+        <h1>Lucas Goudin</h1>
+      </a>
+      <img src="portrait cropped web.png" class="profile-pic" height=70px>
+    </div>
+		<div class="navbar">
+      <div class="el-container">
+        <div class="nav-element"><a href="gallery.html">Gallery</a></div>
+      </div>
+      <div class="el-container">
+        <div class="nav-element"><a href="CV.pdf" target="_blank">CV</a></div>
+      </div>
+      <div class="el-container">
+        <div class="nav-element"><a href="https://github.com/Rukkaitto" target="_blank">Github</a></div>
+      </div>
+      <div class="el-container">
+        <div class="nav-element"><a href="contact.html">Contact</a></div>
+      </div>
+    </div>
+		<div class="container">
 			<h2>Hi, I'm Lucas, and welcome to my website!</h2>
 			<p>
 				I am currently studying Computer Science at the <a href="https://www.u-bordeaux.fr/" target="_blank">University of Bordeaux</a> in France.
@@ -33,8 +43,8 @@
 				I also pursue <em>photography</em> as a hobby. You can find some of my pictures in the <a href="gallery.html">Gallery</a>.
 			</p>
 		</div>
-		<footer>
+		<div class="footer">
 			&copy; 2019 lucasgoudin.com
-		</footer>
+    </div>
 	</body>
 </html>
