@@ -1,17 +1,18 @@
 $dark: #011A27;
 $pale: #CDCDC0;
 $orange: #DB9501;
-$font-family: monospace;
+$font-family: sans-serif;
 
 body {
   max-width: 1000px;
   margin: auto;
   background-color: $dark;
+  height: 100%;
 
   .global-header {
     @extend .flex-it;
     justify-content: space-between;
-
+    
     .name {
       color: $pale;
       text-decoration: none;
@@ -83,12 +84,45 @@ body {
     h2 {
       font-size: 2.2em;
     }
+
+    ul {
+      color: $pale;
+      font-family: $font-family;
+      font-size: 1.5em;
+
+      a:link,
+      a:visited {
+        color: $orange;
+      }
+    }
+  }
+
+  .gallery {
+    margin-top: 20px;
+	  line-height: 0;       
+	 -webkit-column-count: 5;    
+	 -webkit-column-gap: 0px;    
+	 -moz-column-count: 5;
+	 -moz-column-gap: 0px;
+	  column-count: 5;    
+    column-gap: 0px; 
+    display:inline-block;    
+    margin-right: auto;    
+    margin-left: auto;
+
+    img {
+      width: 100% !important;    
+      height: auto !important;
+      &:hover {
+        transform: scale(1.05);
+      }  
+    }
   }
 
   .footer {
+    color: $pale;
     position: absolute;
-    bottom: 0;
-    right: 0;
+    right: 20;
   }
 }
 

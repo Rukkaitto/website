@@ -2,29 +2,38 @@
 
 photos=$(ls photos/*.jpg)
 
-echo "<html>
+echo '<html>
 	<head>
 		<title>Gallery</title>
-        <meta charset=\"UTF-8\">
-        <link rel=\"stylesheet\" type=\"text/css\" href=\"style.css\">
-        <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">
-        <style>
-            @import url('https://fonts.googleapis.com/css?family=Work+Sans');
-        </style>
+		<meta name="google-site-verification" content="s2kFiCPyvkHJSaF_XxCsofeoEWb9noKf2oGcs4FixK0" />
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<script src="http://127.0.0.1:9001/js/socket.js"></script>
+		<style>
+      @import url("https://fonts.googleapis.com/css?family=Work+Sans");
+    </style>
 	</head>
-
 	<body>
-    <a href=\"index.html\"><h1>Lucas Goudin</h1></a>
-		<img src=\"portrait cropped web.png\" class=\"profile_pic\" height=70px>
-		<nav class=\"navbar\">
-			<ul>
-				<li><a href=\"gallery.html\"><u>Gallery</u></a></li>
-				<li><a href=\"cv.html\">CV</a></li>
-				<li><a href=\"https://github.com/Rukkaitto\" target=\"_blank\">Github</a></li>
-				<li><a href=\"contact.html\">Contact</a></li>
-			</ul>
-		</nav>
-    <div class=\"gallery\">" > gallery.html
+    <div class="global-header">
+      <a href="index.html" class="name">
+        <h1>Lucas Goudin</h1>
+      </a>
+      <img src="portrait cropped web.png" class="profile-pic" height=70px>
+    </div>
+		<div class="navbar">
+  <div class="el-container">
+    <div class="nav-element"><a href="gallery.html">Gallery</a></div>
+  </div>
+  <div class="el-container">
+    <div class="nav-element"><a href="cv.html">CV</a></div>
+  </div>
+  <div class="el-container">
+    <div class="nav-element"><a href="https://github.com/Rukkaitto" target="_blank">Github</a></div>
+  </div>
+  <div class="el-container">
+    <div class="nav-element"><a href="contact.html">Contact</a></div>
+  </div>
+</div>
+		<div class="gallery">' > gallery.html
 
 for photo in $photos
 do
@@ -38,9 +47,9 @@ do
     echo "<a target=\"_blank\" href=\"$photo\"><img class=\"photo\" src=\"photos/thumbnails/$thumb_name\"></a>" >> gallery.html
 done
 
-echo "</div>
-<footer>
+echo '</div>
+		<div class="footer">
 			&copy; 2019 lucasgoudin.com
-		</footer>
+    </div>
 	</body>
-</html>" >> gallery.html
+</html>' >> gallery.html
