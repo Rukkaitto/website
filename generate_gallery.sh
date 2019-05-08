@@ -28,10 +28,13 @@ echo "<html>
 
 for photo in $photos
 do
-    echo "converting $photo to thumbnail..."
     photo_base=$(basename $photo)
     thumb_name="${photo_base%.*}_thumbnail.jpg"
-    convert $photo -resize 256x256 photos/thumbnails/$thumb_name
+    if [ ! -f photos/thumbnails/$thumb_name ]; then
+        echo "converting $photo to thumbnail..."
+        convert $photo -resize 256x256 photos/thumbnails/$thumb_name
+    fi
+    
     echo "<a target=\"_blank\" href=\"$photo\"><img class=\"photo\" src=\"photos/thumbnails/$thumb_name\"></a>" >> gallery.html
 done
 
