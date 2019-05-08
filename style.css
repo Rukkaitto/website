@@ -15,6 +15,7 @@ body .global-header .name {
   color: #CDCDC0;
   text-decoration: none;
   font-family: sans-serif;
+  padding-left: 20;
 }
 
 body .global-header .name h1 {
