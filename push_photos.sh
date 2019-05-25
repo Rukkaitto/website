@@ -28,4 +28,4 @@ do
 done
 
 
-echo "ftp-upload -v -h 69.10.39.19 --user $1 --password $2 -d public_html/photos ${photos_to_push:1} -d thumbnails/ ${thumbs_to_push:1}" | bash
+echo "ftp-upload -v -h 69.10.39.19 --user $1 --password $2 -d public_html gallery.html -d photos ${photos_to_push:1} -d thumbnails/ ${thumbs_to_push:1}" | bash
